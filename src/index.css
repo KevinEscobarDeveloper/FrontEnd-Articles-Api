@@ -1,0 +1,296 @@
+/* estilos generales    */
+body{
+  background: #d1defa;
+  font-family:  Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.layout{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "nav nav nav nav"
+  "content content content lateral"
+  "footer footer footer footer"
+  ;
+  grid-template-rows: 100px 70px auto 70px;
+  grid-template-columns: 1fr 1fr 1fr 25%;
+}
+
+/* estilos cabecera */
+.header{
+  grid-area: header;
+  background: white;
+  text-align: left;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  background: linear-gradient(90deg, #03228f 10%, #0e73e4 100% );
+  width: 40px;
+  height: 40px;
+  border-radius: 300px;
+  margin-top: 30px;
+}
+
+.play{
+  width: 0;
+  height: 0;
+  margin-top: 15px;
+  margin-left: 16px;
+  border-left: 12px solid white;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+
+}
+
+.header h1{
+  margin-left: 15px;
+  margin-top: 30px;
+}
+
+/* estilos barra de navegacion */
+.nav{
+  grid-area: nav;
+  background: linear-gradient(90deg, #03228f 10%, #0e73e4 100% );
+}
+
+.nav > ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav li{
+  padding: 10px;
+}
+
+.nav a{
+  display: block;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 18px;
+  font-weight: lighter;
+  color: white;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.nav a:hover{
+  transform: scale(1.1,1.1);
+}
+
+
+/* estilos para el contenido principal */
+.content{
+  grid-area: content;
+  background: #f6f7f9;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: initial;
+}
+
+.articulo-item{
+  margin: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+  flex-grow: 1;
+  display: flex;
+  text-align: left;
+  max-height: 225px;
+}
+
+.articulo-item .mascara{
+  width: 20%;
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+.articulo-item .mascara img{
+  width: 100%;
+}
+
+.articulo-item h3{
+  font-size: 30px;
+}
+
+
+.articulo-item h3 a{
+  text-decoration: none;
+  color: black;
+}
+
+.articulo-item h3 a:hover{
+  color: blue;
+}
+
+.jumbo{
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px #ddd;
+  margin: 25px auto;
+  width: 85%;
+  padding: 55px;
+  padding-bottom: 75px;
+}
+
+.jumbo .mascara{
+  width: 50%;
+  height: 50%;
+
+}
+
+.form-group .mascara{
+  margin: 5px;
+  width: 150px;
+  
+}
+
+.form-group .mascara img{
+  width: 150px;
+
+}
+
+.jumbo h1{
+  font-size: 30px;
+  color: #444;
+}
+
+.jumbo p{
+  display: block;
+  margin-bottom: 40px;
+}
+
+.button,
+button, input[type="submit"], input[type="button"],
+.edit
+{
+  text-decoration: none;
+  width: 100px;
+  background:  #0b70e1;
+  color: white;
+  border: 0;
+  outline: 0;
+  padding: 15px;
+  border-radius: 3px;
+  margin-top: 15px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.articulo-item button{
+  margin: 10px;
+}
+
+.articulo-item .edit:hover{
+ background: #e77b00;
+}
+.delete:hover{
+  background: #9b0202;
+}
+
+/* estilos barra lateral */
+
+.lateral{
+  grid-area: lateral;
+  background: #f6f7f9;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  min-height: 490px;
+}
+
+.lateral > div{
+  box-sizing: border-box;
+  width: 90%;
+  margin: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+
+}
+
+input[type="text"],
+textarea
+{
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  background: #f6f7f9;
+  color: #454545;
+  width: 90%;
+  opacity: 4;
+  outline: 0;
+  border-color: transparent;
+}
+
+.form-group{
+  width: 50%;
+  margin: 0 auto;
+}
+.form-group label{
+  display: block;
+  text-align: left;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"]
+{
+  border: 1px solid #ddd;
+  outline: 0;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+/* estilos para el pie de pagina */
+.footer{
+  grid-area: footer;
+  background: #d1defa;
+  color: #454545;
+  border-top: 1px solid white;
+  text-align: left;
+  line-height: 68px;
+  padding-left: 25px;
+}
+
+.footer a{
+  color: #0b468a;
+  text-decoration: none;
+}
+
+
+@media(max-width: 1085px){
+  .content{
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .articulo-item{
+      width: 80%;
+  }
+}
